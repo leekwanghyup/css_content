@@ -1,0 +1,39 @@
+#wrap { width: 960px; height: 500px; margin: 0 auto; border: 1px solid green;}
+
+.paging ul{ display: flex; justify-content: center; margin-top: 20px;}
+.paging li { padding: 0 7px;}
+.paging a { 
+    display: block; width: 42px; height: 42px; 
+    text-align: center; line-height: 42px;
+    font-size: 15px; color: #555;
+}
+
+.paging .first { margin-right: 16px; background: url(img/prev-first.png) no-repeat center; }
+.paging .prev { margin-right: 6px; background: url(img/paging-prev.png) no-repeat center; }
+.paging .next { margin-left: 6px; background: url(img/paging-next.png) no-repeat center; }
+.paging .last { margin-left: 16px; background: url(img/next-last.png) no-repeat center; }
+
+.paging a.active, .paging a:hover { background-color: #ed1846; color: #fff;}
+
+.paging .first a:hover, 
+.paging .prev a:hover, 
+.paging .next a:hover, 
+.paging .last a:hover {
+    background: none;
+}
+
+/* 검색 영역 */
+.search { 
+    padding: 20px 0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    text-align: center; 
+    font-size: 0;
+}
+.search * { margin: 0 5px; height: 38px;}
+.search select { 
+    width: 148px; 
+    border: 1px solid #ccc;
+}
+.search input[type='search'] { width: 258px; height: 38px;}
+.search button { width: 150px; background: #ed1846; color: #fff;}
