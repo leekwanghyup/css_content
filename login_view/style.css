@@ -1,0 +1,73 @@
+.login { 
+    width: 410px; 
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.login h2 { 
+    font-size: 32px; 
+    color: #111;
+    border-bottom: 2px solid #111;
+    line-height: 1;
+    padding-bottom: 20px;
+}
+.login > ul { padding: 40px 0 33px;}
+.login > ul > li { padding-bottom: 12px; text-align: left;}
+.login li input {
+    box-sizing: border-box;
+    height: 46px;
+    text-indent: 15px;
+}
+.login li input::-webkit-input-placeholder{
+    font-size: 16px; color: #9fa19f;
+    text-indent: 16px;
+}
+
+.login li input[type="checkbox"]{
+    position: absolute; top: -9999px;
+}
+
+.login li input[type="checkbox"] + label { height: 36px; line-height: 36px; }
+.login li input[type="checkbox"] + label::before{ 
+    display: inline-block;
+    width: 18px; height: 18px;
+    content: "";
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    vertical-align: -4px;
+}
+
+.login li input[type="checkbox"]:checked + label::before{
+    background-color: #333; /* 또는 체크 이미지 추가 */
+}
+.login button{
+    width: 100%;
+    height: 56px;
+    line-height: 56px;
+    background-color: #ed1c24;
+    font-size: 18px;
+    color: #fff;
+}
+.login > div { padding: 0 0 45px;}
+.login > div ul {
+    display: flex;
+    justify-content: center;
+}
+.login > div ul li { padding: 0 19px; position: relative;}
+.login > div li ~ li:before{ /* 첫번째 li 제외 */
+    content: ""; position: absolute; top:4px; left: 0; 
+    height: 14px; width: 1px; background-color: #111;
+    transform: rotate(25deg);
+}
+
+.login > div ul li a {
+    font-size: 14px; color: #111;
+}
+.login > a { 
+    font-size: 16px; color: #666; border-bottom: 1px solid #666;
+    padding-bottom: 2spx;
+}
+
+
