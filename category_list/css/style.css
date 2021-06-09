@@ -1,0 +1,32 @@
+body{padding: 20px;} /* 임시 여백 */
+div { box-sizing: border-box;}
+/* #efefef */
+.detail_category { 
+    border: 1px solid #efefef;
+    width: 337px; 
+    padding: 20px 20px 14px;
+}
+.detail_category h2{
+    font-size: 17px;
+    color: #666;
+}
+.detail_category ul {
+    padding-top:12px
+}
+.detail_category ul::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.detail_category li {float: left; padding-right: 13px; 
+    position: relative;
+    line-height: 24px;
+}
+.detail_category li::after{
+    position: absolute;
+    content: "";
+    width: 1px; height: 13px;background-color: #666; 
+    top: 4px; right: 6.5px;
+}
+.detail_category li:last-child:after {display: none;}
+.detail_category li a{font-size: 13px; color: #666;}
