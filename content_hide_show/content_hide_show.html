@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스를 올리면 나타나는 컨텐츠</title>
+</head>
+<body>
+    <div class="box">
+        <div>
+        <ul class="menu">
+            <li>메뉴1</li>
+            <li>메뉴2</li>
+            <li>메뉴3</li>
+        </ul>
+        </div>
+        <div class="test">
+            <article>
+                <h2>veniam aut aspernatur magnam unde</h2>
+                111111 Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Saepe, ducimus! Sunt, doloribus. Omnis tempore laudantium praesentium<br> molestias? Minima ea, veniam aut aspernatur magnam unde quidem dicta 
+                vel illum harum magni.<br><br>
+                <button>닫기</button>
+            </article>
+            <article>
+                <h2>Minima ea, veniam aut aspernatur</h2>
+                22222 Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+                Saepe, ducimus! Sunt, doloribus. Omnis tempore laudantium praesentium<br> molestias? Minima ea, veniam aut aspernatur magnam unde quidem <br>
+                dicta vel illum harum magni.<br><br>
+                <button>닫기</button>
+            </article>
+            <article>
+                <h2>magnam unde quidem dicta</h2>
+                333333 Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+                Saepe, ducimus! Sunt, doloribus. Omnis tempore laudantium <br>
+                praesentium molestias? Minima ea, veniam aut aspernatur magnam<br> 
+                unde quidem dicta vel illum harum magni.<br><br>
+                <button>닫기</button>
+            </article>
+        </div>
+    </div>
+    <div class="box2">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <p>a page when looking at its layout. The point of</p>
+        <p>survived not only five centuries, but also the leap into electronic</p>
+    </div>
+
+<!-- Jqeury-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(function(){
+    var $test = $('.test');
+    var $button = $('.test button');
+    var $select = $('.menu > li'); 
+
+    $test.children().hide();
+    $select.on({
+        mouseover : function(){
+            $test.children().stop().hide(); // 하던일을 멈추고 .test박스 숨김 
+            $select.removeClass(); // li class="tri" 전체 삭제 
+
+            var nth = $(this).index(); // li객체의 인덱스 추출
+            $(this).addClass('tri'); //  삼각형 추가 
+            $test.children().eq(nth).fadeIn(); // 요소를 나타냄 
+        }
+    })
+
+    $button.on('click',function(e){
+        e.preventDefault(); 
+        $select.removeClass(); 
+        $test.children().hide(); 
+    })
+})    
+</script>
+</body>
+</html>
+
+<!-- CSS -->
+<style>
+* { margin: 0; padding: 0; list-style: none;}
+body { padding : 100px ;}
+
+.box ul::after{display: block; content: ""; clear: both;}
+.box ul li {float: left ;padding: 12px 20px; border: 1px solid #ccc;cursor: pointer; position: relative;}
+.tri::after{
+    content: "";
+    display: block;
+    width: 0px; height: 0px;
+    border: 10px solid transparent;
+    border-top: 10px solid #ccc;
+    position: absolute;
+    top: 100%; left: 12%;
+}
+.box .test article {
+    margin-top: 20px;
+    padding : 10px;
+    border: 1px solid green;
+    position: relative;
+    height: 250px;
+}
+.box .test article button {
+    position: absolute;
+    top: 20px; right: 50px;
+}
+
+.box2 { padding: 20px 0 0 0;}
+</style>

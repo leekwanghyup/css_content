@@ -1,0 +1,15 @@
+* { margin: 0; padding: 0; list-style: none;}
+body { padding : 100px ;}
+
+
+.box ul { border: 1px solid red; }
+.box ul::after{display: block; content: ""; clear: both;}
+.box ul li {float: left ;padding: 12px 20px; border: 1px solid green; }
+.box .test article {
+    padding-top: 20px;
+    border: 1px solid green;
+    position: relative;
+    height: 250px;
+}
+
+.box2 { padding: 20px 0 0 0;}
