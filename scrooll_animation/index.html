@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="box1"></div>
+        <div id="box2">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque et ratione soluta numquam ab alias nostrum iste in, illum sequi. Consectetur odio, dolores veniam dicta fugiat ipsa delectus consequuntur laudantium!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque et ratione soluta numquam ab alias nostrum iste in, illum sequi. Consectetur odio, dolores veniam dicta fugiat ipsa delectus consequuntur laudantium!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque et ratione soluta numquam ab alias nostrum iste in, illum sequi. Consectetur odio, dolores veniam dicta fugiat ipsa delectus consequuntur laudantium!</p>
+            <div class="my_test">
+                <h2>스크롤 이벤트</h2>
+                <img src="http://placehold.it/200x200" alt="">
+            </div>
+        </div>
+        <div id="box3">
+            <div>
+                <img src="http://placehold.it/200x200" alt="">
+                <img src="http://placehold.it/200x200" alt="">
+                <img src="http://placehold.it/200x200" alt="">
+            </div>
+        </div>
+    </div>
+<script>
+$(function(){
+    var box2_height = $('#box2 > div').offset().top;
+    var box3_height = $('#box3 img').offset().top; 
+    
+    var view_height = $(window).innerHeight(); // 현재 모니터에서 보이는 브라우저 높이 609
+    var box2_scroll = box2_height - view_height; 
+    var box3_scroll = box3_height - view_height
+    console.log(box2_scroll);
+
+    $(document).scroll(function(){
+        var scroll = $(window).scrollTop(); // 스크롤한 거리 
+        if(scroll >= box2_scroll ){
+            $('#box2').find('img').addClass('fade_in');
+            $('#box2').find('h2').addClass('size_up');
+        } else{
+            $('#box2').find('img').removeClass('fade_in')
+            $('#box2').find('h2').removeClass('size_up');
+        }
+
+        if(scroll >= box3_scroll ){
+            $('#box3').find('img').addClass('height_up');
+        } else {
+            $('#box3').find('img').removeClass('height_up');
+        }
+    }); 
+
+    
+    
+})
+</script>
+</body>
+</html>
