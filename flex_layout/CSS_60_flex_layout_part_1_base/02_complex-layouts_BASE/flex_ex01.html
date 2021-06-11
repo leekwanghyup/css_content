@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section class="banner">
+        <h2 class="hide">주요서비스</h2>
+        <ul>
+            <li><a href=""><strong>가구컴포넌트</strong>소재부터 가구 도어까지 </a></li>
+            <li><a href=""><strong>인테리어자제</strong>행복한 공간을 위한 토털 인테리어</a></li>
+            <li><a href=""><strong>연관 사업</strong>자연과 인간의 조화를 이루는 한솔</a></li>
+            <li><a href=""><strong>고객 상담</strong>무엇이든 물어보세요</a></li>
+        </ul>
+    </section>
+    <footer>
+        <div class="top claerfix">
+            <ul>
+            <li><a href="">고객상담</a></li>    
+            <li><a href="">개인정보처리방침</a></li>    
+            <li><a href="">윤리 경영</a></li>    
+            <li><a href="">E-Market</a></li>    
+            <li><a href="">E-Purchase</a></li>    
+            </ul>
+            <div>
+                <p>고객상담</p>
+                <select>
+                    <option>FAMILY SITE</option>
+                </select>
+            </div>
+        </div>
+        <div class="btm">
+            <p>한솔 홈데코 </p>
+            <ul>
+            <li>서울 동작구 보라매5길 </li>
+            <li>Tel : 000 - 8888 - 0000</li>
+            <li>개인정보취급 관리자</li>
+            <li>Email : hansolhome@naver.com</li>
+            </ul>
+            <address>카피라이트</address>
+        </div>
+    </footer>
+</body>
+</html>
+<style>
+    *{margin: 0; padding: 0; list-style: none;}
+    body{ padding: 30px;}
+    .hide { position: absolute; left: -3000%;}
+
+.banner { border : 1px solid blue}
+.banner strong { display: block;}
+
+.top { border : 1px solid green; height: 150px; padding-top: 20px; padding-left: 20px;}
+.top ul{float: left;}
+.top ul li { float: left;}
+.top ul li a { display: block; padding: 10px 12px; text-decoration: none; border: 1px solid; }
+.top div{background-color: aqua; float: right; padding-right: 55px;}
+.top div p{ display: inline-block; height: 41px; line-height: 41px;}
+.btm { border : 1px solid purple;}
+
+
+.claerfix::after { display: block; content: ""; clear: both;}
+</style>

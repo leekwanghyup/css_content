@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+* {margin: 0; padding: 0; box-sizing: border-box;}
+a { text-decoration: none;}
+li {list-style: none;}
+
+.wrap { width: 1000px; margin: auto; border: 1px solid aqua;}
+.wrap h3 { padding: 10px 0 0 15px; }
+.gallery { padding-top: 30px;}
+.gallery::after{display: block; content: ''; clear: both;}
+.gallery li { float: left; width: 33.3%; text-align: center; position: relative;}
+.gallery li div { width: 300px; height: 200px; 
+overflow: hidden; display: inline-block; transition: 1.5s;}
+.gallery li div img { width: 100%; z-index: -1; position: relative;
+}
+.gallery li p {padding: 5px; width: 100%; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.gallery li p:nth-child(2){ font-weight: bold; } 
+.gallery li a { position: absolute; 
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 2;
+    text-indent: -9999px;
+}
+.gallery li:hover div {
+    background-color: rgba(0, 0, 0, 0.5);
+}
