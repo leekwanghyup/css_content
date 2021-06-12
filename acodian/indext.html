@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="acodian">
+    <h3>title</h3>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus in tenetur quibusdam omnis! Modi ab beatae eos possimus hic recusandae, ratione natus. Alias, ut commodi saepe illo eos unde sed!</p>
+    </div>
+    <h3>title</h3>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus in tenetur quibusdam omnis! Modi ab beatae eos possimus hic recusandae, ratione natus. Alias, ut commodi saepe illo eos unde sed!</p>
+    </div>
+    <h3>title</h3>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus in tenetur quibusdam omnis! Modi ab beatae eos possimus hic recusandae, ratione natus. Alias, ut commodi saepe illo eos unde sed!</p>
+    </div>
+</div>
+
+
+<script>
+$(function(){ 
+    $('.acodian h3').on('click',function(){
+        // $(this).next().slideToggle(); 
+        // $(this).next().siblings('div').slideUp();
+        $(this).next().slideToggle()
+            .siblings('div').slideUp(); 
+    });
+
+});
+</script>
+</body>
+</html>
