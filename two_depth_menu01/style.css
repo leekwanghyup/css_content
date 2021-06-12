@@ -1,0 +1,45 @@
+* {margin: 0; padding:0; list-style: none; text-decoration: none;box-sizing: border-box;}
+a:valid{ color: inherit;}
+
+body { padding: 30px 0 0 40px; }
+#wrap { width: 1200px; margin: 0 auto;}
+
+.clearfix::after { display: block; content: ""; clear: both;}
+#header_wrap .logo { float: left;}
+#header_wrap .logo h2 {background: url(http://placehold.it/150x45) ; width: 150px;
+    height: 45px; text-indent: -9999px;
+}
+
+#header_wrap { width:960px;margin: 0 auto; background-color: #fff;}
+#header_wrap .navbar{ float: right;}
+#header_wrap .navbar > li {
+    float: left;
+    position: relative;
+}
+#header_wrap .navbar > li > a {
+    display: block;
+    padding: 12px 40px; 
+    border: 1px solid greenyellow;
+}
+#header_wrap .sub { 
+    position: absolute; 
+    top: 0; left: 0; /* 테두리 크기만큼 증가 */
+    background-color: #333;
+    border-right: 1px solid #fff;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+}
+#header_wrap .sub li a{
+    display: block; color: #ddd;
+    text-align: center;
+    padding: 12px 0;
+}
+
+#header_wrap .navbar > li:hover > ul {
+    opacity: 1;
+    top:100%; 
+}
+
+section { padding-top: 40px ;}
+
