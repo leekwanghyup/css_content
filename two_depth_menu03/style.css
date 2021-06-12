@@ -1,0 +1,52 @@
+* { margin: 0; padding: 0; box-sizing: border-box;}
+a:visited { color: inherit;}
+li{ list-style: none;}
+.clearfix::after { display: block; content: '';clear: both;}
+
+#header_wrap {
+    position: relative;
+    width: 1100px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+/*로고*/
+#header_wrap h2 { position: absolute; top:0; left: 0;} 
+/*1차메뉴*/
+#header_wrap .navbar{ background-color: red; width: 678px;
+    margin: 0 auto; position: relative;
+}
+
+#header_wrap .navbar > li { float: left; border: 1px solid aqua;}
+#header_wrap .navbar > li > a {
+    display: block;
+    padding: 15px 30px;
+}
+/* 2차메뉴 */
+#header_wrap .sub_menu {
+    border: 1px solid aqua;
+    background-color: #fff;
+    padding: 13px;
+    width: 100%;
+    position: absolute;
+    top: 100%; left: 0;
+    opacity: 0;
+}
+
+#header_wrap .sub_menu .sub_inner_wrap{
+    width: 678px; margin: 0 auto;
+}   
+#header_wrap .sub_menu ul {
+    color: purple;
+    float: left;   
+}
+#header_wrap .sub_menu ul a { 
+    display: block;
+    padding: 10px 14px;
+    border-right: 1px solid bisque;
+}
+ 
+#header_wrap .navbar:hover .sub_menu{
+    opacity: 1;
+    transition: all 1.5s;
+}
